@@ -1,0 +1,871 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    overflow-x: hidden;
+}
+#main{
+    /* width: 100%; */
+    height: 100%;
+    padding: 0 20px;
+    /* overflow: hidden; */
+    /* position: relative; */
+}
+#cursor{
+    width: 40px;
+    height: 40px;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    background-color:rgba(89, 86, 86, 0.566);
+    position: absolute;
+    transition: all linear 0.18s;
+}
+#navbar{
+    width:100%;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    background:white;
+    z-index: 999;
+    margin-right: 2vw;
+    top: 0;
+    left: 0;
+    padding: 0 1.2vw;
+    font-family: 'gilroy';
+    
+}
+#navbar #left{
+    display: flex;
+    gap: 1.8vw;
+}
+#navbar h1{
+    position: relative;
+    overflow: hidden;
+}
+#navbar h1::after{
+     content: "";
+     width: 100%;
+     height: 1px;
+     background-color: #000;
+     position: absolute;
+     left:-100%;
+     bottom: 0;
+     
+}
+#home{
+    font-family: 'gilroy';
+    display: none;
+}
+@keyframes line {
+    0%{
+        left:0%;
+        width: 100%;
+    }
+    100%{
+        left: 100%;
+        width: 100%;
+    }
+}
+#navbar h1:hover::after{
+    animation-name: line;
+    animation-duration: 0.8s;
+    animation-fill-mode:backwards;
+}
+#mid img{
+    height: 4vh;
+}
+#navbar #right{
+    display: flex;
+    gap: 2.4vw;
+}
+#burger{
+    display: none;
+}
+#navbar h1{
+    font-size: 0.6vw;
+    letter-spacing: 0.2vw;
+    font-weight:400 ;
+}
+@media (max-width:600px) {
+    #mid img{
+        display: none;
+    }
+    #burger{
+        display: block;
+        font-size: 40px;
+        color: white;
+        
+    }
+    #navbar #left h1{
+        display: none;
+    }
+    #navbar #right >h1{
+        display: none;
+    }
+    #navbar{
+        background-color: #000;
+        width: 100%;
+        
+    }
+    #main{
+        padding: 0;
+    }
+    #home{
+        font-family: 'gilroy';
+        display: block;
+        color: white;
+        text-transform: uppercase;
+    }
+}
+#section1{
+    width: 100%;
+    height: 98vh;
+    /* background-color: burlywood; */
+    background-image: url(https://alephbeauty.com/cdn/shop/files/aleph-beauty-519-mcu-1400_a6cc296c-dfb9-49e6-b60d-9751d4ddb246_2560x.jpg?v=1668063737);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+#section1 h1{
+    font-size: 4vw;
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+}
+#section1 p{
+    font-size: 1vw;
+    color: white;
+    /* font-family:Georgia, 'Times New Roman', Times, serif; */
+    font-family: 'gilroy';
+    margin-bottom: 1vh;
+}
+
+@media (max-width:600px) {
+     #section1 h1{
+        font-size: 20px;
+     }
+     #section1 p{
+        font-size: 10px;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+     }
+     #section1{
+        background-image: url(https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+     }
+     #section1{
+        height: 80vh;
+     }
+     
+     
+}
+#box{
+    font-size: 2vh;
+    font-weight: 400;
+    color: black;
+    padding: 1vh 2vw;
+    background-color: white;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+#box h2{
+    position: relative;
+    z-index: 99;
+    /* color: white; */
+}
+#black{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    left: -100%;
+    top: 0;
+    transition: all ease 0.3s;
+}
+#box:hover #black{
+    left: 0;
+}
+#box:hover h2{
+    color: white;
+}
+#section2{
+    margin-top: 3vh;
+    width: 100%;
+    height: 90vh;
+    /* background-color: blueviolet; */
+    display: flex;
+}
+#section2-left{
+    width: 50%;
+    height: 90vh;
+    overflow: hidden;
+}
+#section2-right{
+    width: 50%;
+    height: 90Vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    background-color: #EFECE6;
+}
+#section2-right h1{
+    font-size: 3vw;
+    font-family:'Cardinal Fruit Medium'; 
+    font-weight: 200;
+    letter-spacing: -0.1vw;
+    -webkit-font-smoothing: antialiased;
+    line-height: 4vw;
+}
+#line1{
+    margin-left:-7vw;
+}
+#line2{
+    margin-left: 3vw;
+}
+#line3{
+    margin-bottom: 4vh;
+
+    margin-left:8vw ;
+}
+#section2-right #para1{
+    /* text-align: center; */
+    width: 22vw;
+    margin-top: 2vh;
+    font-weight: 500;
+
+}
+#section2-right #para2{
+    /* text-align: center; */
+    margin-top: 2vh;
+    width: 22vw;
+    font-weight: 500;
+}
+#section2-right #para3{
+    display: flex;
+    margin-top:2vh;
+    width: 30vw;
+    font-size:20px ;
+    gap: 10px;
+    padding-left: 2.8vw;
+    font-weight: 500;
+}
+
+
+
+@media (max-width:600px) {
+     #section2{
+        display:block;
+        width: 100%; 
+    } 
+    #section2-left{
+        width: 100%;
+        overflow: hidden;
+        height:40vh;
+        object-fit: cover;
+    }
+    #section2-right{
+        display: none;
+        
+    } 
+}
+   
+    
+
+#section3{
+    margin-top: 30px;
+    width: 100%;
+    height: 100vh;
+    /* background:royalblue; */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows:250px 300px 250px;
+}
+#section3-img1{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    /* background: #000; */
+    overflow: hidden;
+    justify-self: end;
+}
+#section3-img1 img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+#section3-img2{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    overflow: hidden;
+    align-self: last baseline;
+    margin-left: 20px;
+}
+#section3-img2 img{
+    width: 170px;
+    height: 220px;
+    object-fit: cover;
+}
+#section3-text{
+    grid-row: 2/3;
+    grid-column: 2/5;
+    /* background-color: #0000007b;  */
+    overflow: hidden;
+    text-align: center;
+}
+#section3-text h1{
+    font-size: 60px;
+    font-family:'Cardinal Fruit Medium'; 
+}
+#section3-text2{
+    display: flex;
+    justify-content: center;
+}
+#section3-text2 p{
+      width: 500px;
+      font-size: 17px;
+}
+#box1{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#getstarted{
+    width: fit-content;
+    padding: 15px 40px;
+    background-color: #EFECE6;
+    letter-spacing: 2px;
+}
+#getstarted:hover{
+    background: #000;
+    color: white;
+    transition: all ease 0.3s;
+}
+#section3-img3{
+    grid-row: 2/3;
+    grid-column: 5/5;
+}
+#section3-img3 img{
+    margin-top: -30px;
+    margin-right: 20px;
+    width: 300px;
+}
+#section3-img4{
+    grid-row: 3/3;
+    grid-column: 2/3;
+    overflow: hidden;
+}
+#section3-img4 img{
+    width: 200px;
+    height: 240px;
+    object-fit: cover;
+}
+#section3-img5{
+    grid-row: 3/3;
+    grid-column: 4/5;
+    overflow: hidden;
+}
+#section3-img5 img{
+    width: 140px;
+    height: 170px;
+    object-fit: cover;
+}
+@media (max-width:600px) {
+    #section3{
+       display: inline-block;
+       width: 100%;
+       height: 50vh;
+       margin-top: -70vh;
+    }
+    #section3 img{
+        display: none;
+    }
+    #section3-text{
+        width: 100%;
+    }
+    #section3-text >h1{
+        font-size: 25px;
+        font-weight: 800;
+    }
+
+}
+#section4{
+    width: 100%;
+    height: 60vh;
+    background-color: #E4E1DC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.textholder{
+    width: 600px;
+    height: 300px;
+}
+.textholder h1{
+    font-size: 36px;
+    font-family:'Cardinal Fruit Medium'; 
+    font-weight: 300;
+    text-align: center;
+}
+.logosholder{
+    width: 50vw;
+    height: 7vh;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.logosholder img{
+    height: 17px;
+    object-fit: cover;
+    opacity: 0.6;
+    transition: all ease 0.1s;
+}
+.logosholder>img:hover{
+    opacity: 1;
+    scale: 1.01;
+}
+@media (max-width:600px) {
+
+    #section4{
+        width: 100vw;
+        height: 40vh;
+    }
+    .logosholder{
+        width: 100vw;
+        margin-top:px;
+    }
+    .logosholder img{
+        height: 10px;
+        object-fit: cover;
+        padding: 0 2vw;
+    }
+    .textholder{
+        width: 100vw;
+        
+    }
+    .textholder h1{
+        margin-top: 40px;
+        font-size: 20px;
+        font-family:'Cardinal Fruit Medium'; 
+        font-weight: 300;
+        text-align: center;
+        
+    }
+}
+#section5{
+    width: 100%;
+    height: 18vh;
+    background-color:white;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding-bottom: 2vh;
+}
+#section5left{
+    display: flex;
+    align-items: center;
+} 
+#section5left h1{
+    font-size: 3vw;
+    font-family:'Cardinal Fruit Medium'; 
+    margin-right: 4vw;
+}
+#sec5shopall{
+    padding: 2vh 3vw;
+    background-color: #E4E1DC;
+}
+#sec5shopall h1{
+    font-size: 2vwpx;
+    letter-spacing: 2px;
+}
+#sec5shopall:hover{
+    transition: all ease 0.5s;
+    background: #000;
+    color: white;
+}
+#section5left h2{
+    margin: 0 2vw;
+    margin-top: 1.8vh;
+    font-size: 1vw;
+    color:#51504fbe;
+    position: relative;
+    overflow: hidden;
+}
+#section5left h2::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    left: -100%;
+    position: absolute;
+    background: #000;
+    bottom: 0;
+}
+#section5left h2:hover::after{
+    animation-name: line;
+    animation-duration: 0.8s;
+    animation-fill-mode:backwards;
+    /* animation-iteration-count: infinite; */
+    
+}
+#section5left h2:hover{
+    color: #000;
+    transition: all ease 0.2s;
+}
+@keyframes line {
+    0%{
+        left:0%;
+        width: 100%;
+    }
+    100%{
+        left: 100%;
+        width: 100%;
+    }
+}
+@media (max-width:600px) {
+    #section5{
+        width:100vw;
+        margin-top: -20px;
+    }
+    #section5left h1{
+        font-size: 4vw;
+        font-family:'Cardinal Fruit Medium'; 
+        margin-right: 4vw;
+        margin-left: 1.3vw;
+    }
+    #section5left h2{
+        margin: 0 2vw;
+        font-size: 4vw;
+        color:#51504fbe;
+        position: relative;
+        overflow: hidden;
+    }
+    #sec5shopall{
+        padding: 1vh 2vw;
+        background-color: #E4E1DC;
+        margin-right: 2vw;
+       
+    }
+    #sec5shopall h1{
+        font-size: 3vw;
+    }
+    
+}
+#section6{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    gap: 10px;
+}
+.sec6-1{
+    width: 33%;
+    height: 70vh;
+    background-image: url(https://alephbeauty.com/cdn/shop/files/aleph-cheek-lip-tint-gloria-6g-Jar_3200x3724px.png?v=1708135217&width=1400);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    background-color: #E4E1DC;
+}
+.sec6-2{
+    width: 33%;
+    height: 70vh;
+    background-image: url(https://alephbeauty.com/cdn/shop/files/aleph-cheek-lip-tint-6gJar_Emanate_update_3200x3724px.png?v=1691119781&width=1400);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;   
+     background-color: #E4E1DC;
+    
+}
+.sec6-3{
+    position: relative;
+    width: 33%  ;
+    height: 70vh;
+    background-color: #E4E1DC;
+    background-image: url(https://alephbeauty.com/cdn/shop/products/aleph-cheek-lip-tint-6g-Jar_Grounded_3200x3724px.png?v=1663658337&width=1400);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+#meo{
+    width: 100%;
+    height: 100%;
+}
+#blacky{
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+}
+.sec6-1:hover #meo{
+    display:none ;
+}
+.sec6-2:hover #meo{
+    display:none ;
+}
+.sec6-3:hover #meo{
+    display:none ;
+}
+.sec6-1:hover{
+    background-image: url(https://alephbeauty.com/cdn/shop/files/Aleph_2024_Cheek-Lip-Tint-Gloria-campaign_637dfdd3-2ba1-4d74-a055-d9016e66ccc1.jpg?v=1708369173&width=1600);
+    transition: all ease 0.5s;
+}
+.sec6-2:hover{
+    background-image: url(https://alephbeauty.com/cdn/shop/files/aleph-cheek-lip-tint-emanate-model_0831.jpg?v=1691119781&width=1600);
+    transition: all ease 0.5s;
+}
+.sec6-3:hover{
+    background-image: url(https://alephbeauty.com/cdn/shop/products/Cheek_LipTintGrounded_1.jpg?v=1663658337&width=1400);
+    transition: all ease 0.5s;
+}
+#blacky>h1{
+    color: white;
+    text-align: center;
+}
+.sec6-3:hover #blacky
+{
+    top: 91%;
+    transition: all ease 0.3s;
+}
+.sec6-2:hover #blacky
+{
+    top: 91%;
+    transition: all ease 0.3s;
+}
+
+.sec6-1:hover #blacky
+{
+    top: 91%;
+    transition: all ease 0.3s;
+}
+@media (max-width:600px) {
+    #section6{
+        display: block;
+        width: 100vw;
+    }
+    .sec6-1{
+        width: 100vw;
+        height: 70vh;
+        margin-bottom: 0.4vh;
+       
+    }
+    .sec6-2{
+        width: 100vw;
+        height: 70vh;
+        margin-bottom: 0.4vh;
+        
+    }
+    .sec6-3{
+        width: 100vw;
+        height: 70vh;
+        margin-bottom: 0.4vh;
+    } 
+}
+.section7{
+    margin-top: 10vh;
+    width: 100%;
+    height: 90vh;
+    /* background-color: rgba(81, 68, 50, 0.183); */
+    white-space: nowrap;
+    margin-bottom: 10vh;
+
+}
+#review{
+    text-align: center;
+    font-size: 3vw;
+    font-family: 'cardinalfruit';
+    margin-bottom: 6vh;
+    font-weight: 400;
+}
+#slider{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: move;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+#slider >div{
+    width: 40vw;
+    height: 65vh;
+    background-color: rgba(6, 46, 46, 0.57);
+    display: inline-block;
+    overflow-y: hidden; 
+    overflow-x: hidden; 
+}
+#slide1 >#slide-in{
+    width: 40vw;
+    height: 65vh;
+    display: flex;
+    position: relative;
+}
+#slide-in >#slide-in-left{
+   width: 50%;
+   height: 100%;
+   background-color: #F16151;
+   padding: 2vh 1vw;
+  
+}
+#slide-in >#slide-in-right{
+    width: 50%;
+    height: 100%;
+}
+#slide-in-right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#slide-in-left h2{
+    font-size: 1.4vw;
+     
+    color: white;
+ }
+#slide-in-left h1{
+   font-size: 1vw;
+   font-family: "gilroy";
+   color: white;
+   font-weight: 300;
+}
+#slide-in >img{
+    position: absolute;
+    left: 22%;
+    top: 10%;
+}
+#slide2 >#slide-in{
+    width: 40vw;
+    height: 65vh;
+    display: flex;
+    position: relative;
+}
+#slide2 >#slide-in>#slide-in-left{
+    background-color: #65372B;
+}
+#slide3 >#slide-in{
+    width: 40vw;
+    height: 65vh;
+    display: flex;
+    position: relative;
+}
+#slide3 >#slide-in>#slide-in-left{
+    background-color: #1F1C1D;
+}
+#slide4 >#slide-in{
+    width: 40vw;
+    height: 65vh;
+    display: flex;
+    position: relative;
+}
+#slide4 >#slide-in>#slide-in-left{
+    background-color: #C7906A;
+}
+@keyframes move {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+#section8{
+    margin-top: 15vh;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+}
+#section8> div{
+ width: 24.9%;
+ height: 100%;
+}
+#sec8-1 h1{
+    font-family:'Cardinal Fruit Medium'; 
+     font-size: 2.7vw;
+     line-height: 2.7vw;
+     font-weight: 500;
+}
+#section8 button{
+    background-color:#E3DFDA;
+    padding: 1.3vh 1.8vw;
+    opacity: 0;
+    margin-top: 5vh;
+    font-size: 0.8vw;
+    transition: all ease 0.3s;
+}
+#section8>div:hover button{
+    opacity: 1;
+}
+#section8 button:hover{
+    
+    background-color: #000;
+    color: white;
+}
+#section9{
+    margin-top: 10vh;
+    width: 100%;
+    height: 80vh;
+    background-image: url(https://alephbeauty.com/cdn/shop/files/ex-sus.jpg?v=1661851834);
+    background-position: center;
+    background-size: cover;
+    padding: 8vh 4vw;
+}
+#section9 h1{
+    font-size: 0.7vw;
+    color:grey ;
+    letter-spacing: 0.2vw;
+    font-family: 'gilroy';
+}
+#section9 h2{
+    font-size: 1.8vw;
+    font-family:'Cardinal Fruit'; 
+    width: 34%;
+    margin-top: 1vh;
+    line-height: 4.4vh;
+    font-weight: 200;
+}
+#section9 button{
+    margin-top: 3.9vh;
+    color: black;
+    background-color: white;
+    padding: 1.4vh 1.8vw;
+    font-size: 0.8vw;
+    letter-spacing: 0.1vw;
+    transition: all ease 0.2s;
+}
+#section9 button:hover{
+    background-color: black;
+    color: white;
+}
+#section10{
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
